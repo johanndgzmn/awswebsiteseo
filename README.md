@@ -31,6 +31,7 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 Then run npm run build, then find the static HTML files in the '/out' folder. The folder should have pre-rendered .html files for each static page.
+
 2. You should be able to open index.html in the '/out' folder in a browser without a Node.js server.
 
 
