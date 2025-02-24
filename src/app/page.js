@@ -1,101 +1,67 @@
-import Image from "next/image";
+import Header from './components/header.js';
+import Footer from './components/footer.js';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div>
+        <Header />
+        <section class="w-screen max-h-full">
+            <div class="flex flex-col max-w-screen-md mx-auto text-left pt-9">
+                <h1 class="text-9xl font-bold text-white">cs.fyi</h1>
+                <h2 class="text-gray-400 mt-6 text-xl">Frontend, Backend, DevOps and everything in between.</h2>
+            </div>
+            <div class="flex justify-between max-w-screen-md mx-auto pt-16 text-left">
+                <a class="text-white text-2xl">Deploy to ECS with Fargate using Terraform</a>
+                <a class="text-gray-600 text-lg hover:text-white">Nov 3, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <div class="flex justify-between max-w-screen-md mx-auto text-left">
+                <a class="text-white text-2xl">IaaS vs PaaS vs SaaS</a>
+                <a class="text-gray-600 text-lg hover:text-white">Oct 24, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <div class="flex justify-between max-w-screen-md mx-auto text-left">
+                <a class="text-white text-2xl">Scalability for Dummies</a>
+                <a class="text-gray-600 text-lg hover:text-white">Sep 24, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <div class="flex justify-between max-w-screen-md mx-auto text-left">
+                <a class="text-white text-2xl">Load IP addresses for EC2 in Ansible Inventory</a>
+                <a class="text-gray-600 text-lg hover:text-white">Sep 6, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <div class="flex justify-between max-w-screen-md mx-auto text-left">
+                <a class="text-white text-2xl">Generate Terraform from existing AWS infrastructure</a>
+                <a class="text-gray-600 text-lg hover:text-white">Sep 6, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <div class="flex justify-between max-w-screen-md mx-auto text-left">
+                <a class="text-white text-2xl">Setup and Install PostgreSQL Using Docker</a>
+                <a class="text-gray-600 text-lg hover:text-white">Apr 18, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <div class="flex justify-between max-w-screen-md mx-auto text-left">
+                <a class="text-white text-2xl">Add Multiple SSH keys to an EC2 Server</a>
+                <a class="text-gray-600 text-lg hover:text-white">Apr 7, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <div class="flex justify-between max-w-screen-md mx-auto text-left">
+                <a class="text-white text-2xl">How to push to a Different git Branch?</a>
+                <a class="text-gray-600 text-lg hover:text-white">Apr 7, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <div class="flex justify-between max-w-screen-md mx-auto text-left">
+                <a class="text-white text-2xl">How to get Username and Group in Linux</a>
+                <a class="text-gray-600 text-lg hover:text-white">Apr 6, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <div class="flex justify-between max-w-screen-md mx-auto text-left">
+                <a class="text-white text-2xl">Everything You Need to Know About DNS</a>
+                <a class="text-gray-600 text-lg hover:text-white">Mar 26, 2023</a>
+            </div>
+            <hr class="w-full max-w-screen-md mx-auto my-4 border-gray-500"></hr>
+            <Footer />
+        </section>
     </div>
   );
 }
