@@ -20,3 +20,15 @@ Using Next.js:
     - Use getStaticPaths for Dynamic Routes
         - For dynamic pages (e.g., /posts/[id].js), use getStaticPaths to generate static paths at build time.
 3. Run using: npm run dev or npm start
+
+## How to verify if it works?
+1. Setup next.config.js
+```/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export", // Enables static site generation
+};
+
+module.exports = nextConfig;
+```
+Then run npm run build, then find the static HTML files in the '/out' folder. The folder should have pre-rendered .html files for each static page.
+2. You should be able to open index.html in the '/out' folder in a browser without a Node.js server.
