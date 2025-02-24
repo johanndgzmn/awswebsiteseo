@@ -1,4 +1,4 @@
-SEO test using a sample react app for AWS Website.
+SEO test using a sample react app.
 
 # Demo
 [https://awswebsiteseo-git-main-johanndgzmns-projects.vercel.app/](https://awswebsiteseo.vercel.app/)
@@ -20,6 +20,3 @@ Using Next.js:
     - Use getStaticPaths for Dynamic Routes
         - For dynamic pages (e.g., /posts/[id].js), use getStaticPaths to generate static paths at build time.
 3. Run using: npm run dev or npm start
-
-## How to verify if it is actually working:
-Run 
