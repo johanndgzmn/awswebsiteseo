@@ -1,7 +1,7 @@
 SEO test using a sample react app for AWS Website.
 
 # Demo
-https://awswebsiteseo-git-main-johanndgzmns-projects.vercel.app/
+[https://awswebsiteseo-git-main-johanndgzmns-projects.vercel.app/](https://awswebsiteseo.vercel.app/)
 # Static Site Generation (SSG)
 ## What is it?
 - It basically generates the page HTML at build time, instead of generating them dynamically on the server or client-side.
