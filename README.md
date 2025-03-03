@@ -1,40 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+SEO test using a sample react app.
 
-## Getting Started
+# Demo
+[https://awswebsiteseo-git-main-johanndgzmns-projects.vercel.app/](https://awswebsiteseo.vercel.app/)
+# Static Site Generation (SSG)
+## What is it?
+- It basically generates the page HTML at build time, instead of generating them dynamically on the server or client-side.
 
-First, run the development server:
+## Benefits of SSG
+1. Improved site performance
+2. Better search engine optimization (SEO), since search engine crawlers can easily discover and index the content of your website due to pre-rendered HTML pages.
+3. Lower hosting costs
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## How to implement?
+Using Next.js:
+1. Install next js using: npx create-next-app@latest
+2. Disable App Router when asked in creating the app.
+3. For static site generation:
+    - Use getStaticProps for Static Generation
+        - In a page component (e.g., pages/index.js), use getStaticProps to fetch data at build time.
+    - Use getStaticPaths for Dynamic Routes
+        - For dynamic pages (e.g., /posts/[id].js), use getStaticPaths to generate static paths at build time.
+4. Run using: npm run dev or npm start
+
+## How to verify if it works?
+1. Setup next.config.js
+```/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export", // Enables static site generation
+};
+
+module.exports = nextConfig;
 ```
+Then run npm run build, then find the static HTML files in the '/out' folder. The folder should have pre-rendered .html files for each static page.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. You should be able to open index.html in the '/out' folder in a browser without a Node.js server.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+# Implementing in Amazon S3
+1. Create an S3 Bucket.
+2. Enable Static Website Hosting.
+3. Upload static files from the '/out' folder.
+4. Configure S3 Bucket Permissions.
